@@ -1,5 +1,5 @@
 import React  from 'react';
-import faker from 'faker';
+
 
 // so to get access of the props that provided to the p component that prop is going to show inside of a object
 //that is provided as the first argument to the function.
@@ -8,7 +8,7 @@ const CommentDetail = (props) => {
     return (
         <div className="comment">
         <a href="/" className="avatar">
-            <img alt="avatar" src={faker.image.avatar()} />
+            <img alt="avatar" src={props.avatar} />
         </a>
         <div className="content">
             <a href="/" className="author" >
@@ -19,10 +19,10 @@ const CommentDetail = (props) => {
                property in there and that is going to take that author name and stick it into the anchor tag */}
             </a>
             <div className="metadata">
-                <span className="date">Today at 6.00PM</span>
+                <span className="date">{props.timeAgo}</span>
             </div>
             <div className="text">
-                Nice blog post!
+               {props.commentText}
             </div>
         </div>
     </div>
