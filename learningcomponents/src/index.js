@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import faker from 'faker';
 import CommentDetail from './CommentDetail';
+import ApprovalCard from './ApprovalCard';
 const App = () => {
     return (
         <div className="ui container comments">
             {/* whenever we provide props to the component is always going to be unique version of that component, for eg
             the author="sam" is not going to be same like other props*/ }
+            <ApprovalCard/>
        <CommentDetail
         author="Sam" 
         timeAgo="Today at 4.45PM" 
